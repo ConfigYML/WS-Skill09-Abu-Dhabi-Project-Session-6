@@ -50,7 +50,7 @@
                                 <Grid
                                     HorizontalOptions="Fill"
                                     Padding="10"
-                                    ColumnDefinitions="2*, *">
+                                    ColumnDefinitions="*, 1.5*">
                                     <Label
                                         Text="Confirmed:"/>
                                     <Label
@@ -61,7 +61,7 @@
                                 <Grid
                                     HorizontalOptions="Fill"
                                     Padding="10"
-                                    ColumnDefinitions="2*, *">
+                                    ColumnDefinitions="*, 1.5*">
                                     <Label
                                         Text="Cancelled:"/>
                                     <Label
@@ -72,7 +72,7 @@
                                 <Grid
                                     HorizontalOptions="Fill"
                                     Padding="10"
-                                    ColumnDefinitions="2*, *">
+                                    ColumnDefinitions="*, 1.5*">
                                     <Label
                                         Text="Average flight time:"/>
                                     <Label
@@ -99,7 +99,7 @@
                                 <Grid
                                     HorizontalOptions="Fill"
                                     Padding="10"
-                                    ColumnDefinitions="*, 2*">
+                                    ColumnDefinitions="*, 10*">
                                     <Label
                                         Text="1."/>
                                     <Label
@@ -110,7 +110,7 @@
                                 <Grid
                                     HorizontalOptions="Fill"
                                     Padding="10"
-                                    ColumnDefinitions="*, 2*">
+                                    ColumnDefinitions="*, 10*">
                                     <Label
                                         Text="2."/>
                                     <Label
@@ -121,7 +121,7 @@
                                 <Grid
                                     HorizontalOptions="Fill"
                                     Padding="10"
-                                    ColumnDefinitions="*, 2*">
+                                    ColumnDefinitions="*, 10*">
                                     <Label
                                         Text="3."/>
                                     <Label
@@ -210,7 +210,7 @@
                                 <Grid
                                     HorizontalOptions="Fill"
                                     Padding="10"
-                                    ColumnDefinitions="*, 2*">
+                                    ColumnDefinitions="*, 10*">
                                     <Label
                                         Text="1."/>
                                     <Label
@@ -221,7 +221,7 @@
                                 <Grid
                                     HorizontalOptions="Fill"
                                     Padding="10"
-                                    ColumnDefinitions="*, 2*">
+                                    ColumnDefinitions="*, 10*">
                                     <Label
                                         Text="2."/>
                                     <Label
@@ -232,7 +232,7 @@
                                 <Grid
                                     HorizontalOptions="Fill"
                                     Padding="10"
-                                    ColumnDefinitions="*, 2*">
+                                    ColumnDefinitions="*, 10*">
                                     <Label
                                         Text="3."/>
                                     <Label
