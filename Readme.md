@@ -1,0 +1,14 @@
+# Requirements
+To be able to start the application please make sure that MSSQL local database is installed on your system. To add the database open Visual Studio and perform the following steps:
+- Open Server Explorer under the View tab
+- Add a database
+- Change data source to Microsoft SQL Server database file (SqlClient)
+- For the database file select the Database6.mdf file located in the database folder
+- Click on OK to add the database
+- Now ensure in the SQL Server Object Explorer that the database is named 'Session6'. If this is not the case you should change the name.
+
+# Starting the application
+For starting the application navigate to the Executable/net9.0-windows10.0.19041.0/win10-x64 folder and double-click the _runMe.exe file.
+
+# Important information
+Since the dates of these flight are not even close to the current time the datetime which marks the point in time from when this report is created is set to '29-10-2017 00:00:00'. 

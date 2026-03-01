@@ -1,0 +1,346 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Session_6_Dennis_Hilfinger.MainPage"
+             Title="Short Summary">
+    <ContentPage.Resources>
+        <Style x:Key="HeadingStyle" TargetType="Label">
+            <Setter Property="FontSize" Value="24"/>
+            <Setter Property="FontFamily" Value="TexBold"/>
+        </Style>
+        <Style x:Key="SubheadingStyle" TargetType="Label">
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="FontFamily" Value="TexBold"/>
+        </Style>
+    </ContentPage.Resources>
+    <ScrollView
+        Padding="0, 50, 0, 100">
+        <VerticalStackLayout 
+            WidthRequest="900"
+            HorizontalOptions="Center"
+            Spacing="20">
+
+            <Border
+                Stroke="{StaticResource PrimaryBlue}"
+                StrokeThickness="3"
+                Padding="5">
+                <VerticalStackLayout>
+                    <Label 
+                        Text="In the last 30 days"
+                        Style="{StaticResource HeadingStyle}"/>
+
+
+                    <Grid
+                        ColumnDefinitions="*, *"
+                        RowDefinitions="*, *"
+                        RowSpacing="10"
+                        ColumnSpacing="10">
+
+                        <Border
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            Stroke="{StaticResource PrimaryOrange}"
+                            StrokeThickness="3"
+                            Padding="5">
+                            <VerticalStackLayout>
+                                <Label
+                                    Text="Flights"
+                                    Style="{StaticResource SubheadingStyle}"/>
+
+                                <Grid
+                                    HorizontalOptions="Fill"
+                                    Padding="10"
+                                    ColumnDefinitions="2*, *">
+                                    <Label
+                                        Text="Confirmed:"/>
+                                    <Label
+                                        x:Name="ConfirmedCountLabel"
+                                        Text="0"
+                                        Grid.Column="1"/>
+                                </Grid>
+                                <Grid
+                                    HorizontalOptions="Fill"
+                                    Padding="10"
+                                    ColumnDefinitions="2*, *">
+                                    <Label
+                                        Text="Cancelled:"/>
+                                    <Label
+                                        x:Name="CancelledCountLabel"
+                                        Text="0"
+                                        Grid.Column="1"/>
+                                </Grid>
+                                <Grid
+                                    HorizontalOptions="Fill"
+                                    Padding="10"
+                                    ColumnDefinitions="2*, *">
+                                    <Label
+                                        Text="Average flight time:"/>
+                                    <Label
+                                        x:Name="AvgFlightTimeLabel"
+                                        Text="0 minutes"
+                                        Grid.Column="1"/>
+                                </Grid>
+
+                            </VerticalStackLayout>
+                        </Border>
+
+
+                        <Border
+                            Grid.Row="0"
+                            Grid.Column="1"
+                            Stroke="{StaticResource PrimaryOrange}"
+                            StrokeThickness="3"
+                            Padding="5">
+                            <VerticalStackLayout>
+                                <Label
+                                    Text="Top Costumers (Number of purchased tickets)"
+                                    Style="{StaticResource SubheadingStyle}"/>
+
+                                <Grid
+                                    HorizontalOptions="Fill"
+                                    Padding="10"
+                                    ColumnDefinitions="*, 2*">
+                                    <Label
+                                        Text="1."/>
+                                    <Label
+                                        x:Name="FirstCostumerLabel"
+                                        Text=""
+                                        Grid.Column="1"/>
+                                </Grid>
+                                <Grid
+                                    HorizontalOptions="Fill"
+                                    Padding="10"
+                                    ColumnDefinitions="*, 2*">
+                                    <Label
+                                        Text="2."/>
+                                    <Label
+                                        x:Name="SecondCostumerLabel"
+                                        Text=""
+                                        Grid.Column="1"/>
+                                </Grid>
+                                <Grid
+                                    HorizontalOptions="Fill"
+                                    Padding="10"
+                                    ColumnDefinitions="*, 2*">
+                                    <Label
+                                        Text="3."/>
+                                    <Label
+                                        x:Name="ThirdCostumerLabel"
+                                        Text=""
+                                        Grid.Column="1"/>
+                                </Grid>
+
+                            </VerticalStackLayout>
+                        </Border>
+
+
+                        <Border
+                            Grid.Row="1"
+                            Grid.Column="0"
+                            Stroke="{StaticResource PrimaryOrange}"
+                            StrokeThickness="3"
+                            Padding="5">
+                            <VerticalStackLayout>
+                                <Label
+                                     Text="Number of passengers flying"
+                                     Style="{StaticResource SubheadingStyle}"/>
+
+                                <Grid
+                                    HorizontalOptions="Fill"
+                                    Padding="10"
+                                    ColumnDefinitions="3*, 2*, *, *, *"
+                                    ColumnSpacing="5">
+                                    <Label
+                                         Text="Busiest day:"/>
+                                    <Label
+                                         x:Name="BusyDayDate"
+                                         Text="dd/mm/yyyy"
+                                         Grid.Column="1"/>
+                                    <Label
+                                         Text="with"
+                                         Grid.Column="2"/>
+                                    <Label
+                                         x:Name="BusyDayCount"
+                                         Text="0"
+                                         Grid.Column="3"/>
+                                    <Label
+                                         Text="flying"
+                                         Grid.Column="4"/>
+                                </Grid>
+                                <Grid
+                                    HorizontalOptions="Fill"
+                                    Padding="10"
+                                    ColumnDefinitions="3*, 2*, *, *, *"
+                                    ColumnSpacing="5">
+                                    <Label
+                                         Text="Most quiet day:"/>
+                                    <Label
+                                         x:Name="QuietDayDate"
+                                         Text="dd/mm/yyyy"
+                                         Grid.Column="1"/>
+                                    <Label
+                                         Text="with"
+                                         Grid.Column="2"/>
+                                    <Label
+                                         x:Name="QuietDayCount"
+                                         Text="0"
+                                         Grid.Column="3"/>
+                                    <Label
+                                         Text="flying"
+                                         Grid.Column="4"/>
+                                </Grid>
+
+                            </VerticalStackLayout>
+
+                        </Border>
+
+
+                        <Border
+                            Grid.Row="1"
+                            Grid.Column="1"
+                            Stroke="{StaticResource PrimaryOrange}"
+                            StrokeThickness="3"
+                            Padding="5">
+
+                            <VerticalStackLayout>
+                                <Label
+                                    Text="Top airline offices (based on revenue)"
+                                    Style="{StaticResource SubheadingStyle}"/>
+
+                                <Grid
+                                    HorizontalOptions="Fill"
+                                    Padding="10"
+                                    ColumnDefinitions="*, 2*">
+                                    <Label
+                                        Text="1."/>
+                                    <Label
+                                        x:Name="FirstOfficeLabel"
+                                        Text=""
+                                        Grid.Column="1"/>
+                                </Grid>
+                                <Grid
+                                    HorizontalOptions="Fill"
+                                    Padding="10"
+                                    ColumnDefinitions="*, 2*">
+                                    <Label
+                                        Text="2."/>
+                                    <Label
+                                        x:Name="SecondOfficeLabel"
+                                        Text=""
+                                        Grid.Column="1"/>
+                                </Grid>
+                                <Grid
+                                    HorizontalOptions="Fill"
+                                    Padding="10"
+                                    ColumnDefinitions="*, 2*">
+                                    <Label
+                                        Text="3."/>
+                                    <Label
+                                        x:Name="ThirdOfficeLabel"
+                                        Text=""
+                                        Grid.Column="1"/>
+                                </Grid>
+
+                            </VerticalStackLayout>
+                        </Border>
+
+
+                    </Grid>
+                </VerticalStackLayout>
+
+            </Border>
+
+
+            <Border
+                Stroke="{StaticResource PrimaryBlue}"
+                StrokeThickness="3"
+                Padding="5">
+                <VerticalStackLayout>
+                    <Label 
+                        Text="Revenue from ticket sales"
+                        Style="{StaticResource HeadingStyle}"/>
+                    <Grid
+                        ColumnDefinitions="*, *, *"
+                        ColumnSpacing="20">
+                        <HorizontalStackLayout
+                            Grid.Column="0"
+                            Spacing="5">
+                            <Label
+                                Text="Yesterday:"/>
+                            <Label
+                                x:Name="RevenueYesterdayLabel"
+                                Text="$ 0"/>
+                        </HorizontalStackLayout>
+                        <HorizontalStackLayout
+                            Grid.Column="1"
+                            Spacing="5">
+                            <Label
+                                Text="Two days ago:"/>
+                            <Label
+                                x:Name="RevenueTwoDaysLabel"
+                                Text="$ 0"/>
+                        </HorizontalStackLayout>
+                        <HorizontalStackLayout
+                            Grid.Column="2"
+                            Spacing="5">
+                            <Label
+                                Text="Three days ago:"/>
+                            <Label
+                                x:Name="RevenueThreeDaysLabel"
+                                Text="$ 0"/>
+                        </HorizontalStackLayout>
+                    </Grid>
+                </VerticalStackLayout>
+            </Border>
+
+            
+            <Border
+                Stroke="{StaticResource PrimaryBlue}"
+                StrokeThickness="3"
+                Padding="5">
+                <VerticalStackLayout>
+                    <Label 
+                        Text="Weekly report of percentage of empty seats"
+                        Style="{StaticResource HeadingStyle}"/>
+                    <Grid
+                        ColumnDefinitions="*, *, *"
+                        ColumnSpacing="20">
+                        <HorizontalStackLayout
+                            Grid.Column="0"
+                            Spacing="5">
+                            <Label
+                                Text="This week:"/>
+                            <Label
+                                x:Name="EmptySeatsThisWeekLabel"
+                                Text="0 %"/>
+                        </HorizontalStackLayout>
+                        <HorizontalStackLayout
+                            Grid.Column="1"
+                            Spacing="5">
+                            <Label
+                                Text="Last week:"/>
+                            <Label
+                                x:Name="EmptySeatsLastWeekLabel"
+                                Text="0 %"/>
+                        </HorizontalStackLayout>
+                        <HorizontalStackLayout
+                            Grid.Column="2"
+                            Spacing="5">
+                            <Label
+                                Text="Two weeks ago:"/>
+                            <Label
+                                x:Name="EmptySeatsTwoWeeksAgoLabel"
+                                Text="0 %"/>
+                        </HorizontalStackLayout>
+                    </Grid>
+                </VerticalStackLayout>
+            </Border>
+
+            <Label
+                Text="Report generated in 0 minutes and 0 seconds"
+                x:Name="GenerationTimeLabel"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
