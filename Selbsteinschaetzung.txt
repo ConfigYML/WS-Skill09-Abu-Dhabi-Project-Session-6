@@ -1,0 +1,1 @@
+Session fing sehr gut an, jedoch hatte ich Probleme dabei, die summierte Werte zu laden (GroupBy hier sinnvoll?). Zum Erstellen der Präsentation reichte es zeitlich nicht.
